@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float M,K;
+    printf("Digite uma velocidade em m/s: ");
+    scanf("%f",&M);
+    K = M*3.6;
+    printf("O valor de %f m/s em km/h e igual a %f",M,K);
+    return 0;
+}
