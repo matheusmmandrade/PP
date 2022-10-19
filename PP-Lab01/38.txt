@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define a 1.25
+
+int main()
+{
+    float s,s1;
+    printf("Digite o valor do salario atual: ");
+    scanf("%f",&s);
+    s1 = s*a;
+    printf("O valor do novo salario e igual a %.2f",s1);
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float H,M;
+    printf("Digite um valor em hectares: ");
+    scanf("%f",&H);
+    M = H*10000;
+    printf("O valor de %f hectares em metros quadrados e igual a %f",H,M);
+    return 0;
+}

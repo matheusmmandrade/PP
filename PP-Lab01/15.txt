@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.141592
+
+int main()
+{
+    float R,G;
+    printf("Digite um ângulo em radianos: ");
+    scanf("%f",&R);
+    G = R*180/pi;
+    printf("O valor de %f radianos em graus e igual a %f",R,G);
+    return 0;
+}
