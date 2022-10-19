@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int s,m,h;
+    printf ("Digite um valor em segundos: ");
+    scanf ("%d",&s);
+    m = s/60;
+    h = s/3600;
+    printf ("O valor de %d segundos em minutos eh igual a %d minutos. Ja o valor de %d segundos em horas eh igual a %d hora(s). ",s,m,s,h);
+    
+    return 0;
+    
+}

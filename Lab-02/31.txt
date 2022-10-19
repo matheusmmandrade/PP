@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n1,n2,n;
+    printf("Digite um número inteiro: ");
+    scanf("%d",&n);
+    n1 = n-1;
+    n2 = n+1;
+    printf("O valor do antecessor de %d e igual a %d e o sucessor de %d e igual a %d ",n,n1,n,n2);
+    return 0;
+}

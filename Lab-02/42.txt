@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    float sb,sr;
+    printf("Digite o salário base do funcionário: ");
+    scanf("%f",&sb);
+    
+    sr = (sb*0.05) + (sb*0.93);
+    
+    printf("O salário real eh igual a: %2.f reais",sr);
+    
+    return 0;
+    
+}

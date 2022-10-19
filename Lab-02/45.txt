@@ -1,0 +1,19 @@
+#include <math.h>
+#include <stdio.h>
+
+int main ()
+{
+  char l1,l;
+  
+ printf("Digite uma letra: ");
+ scanf("%c",&l1);
+
+ l = l1+32;
+ 
+ printf("A letra %c em minusculo eh igual a %c !",l1,l);
+ 
+ return 0;
+ 
+}
+ 
+  

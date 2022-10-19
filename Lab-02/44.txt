@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    float hd,ht,nd;
+    printf("Qual a altura do degrau? ");
+    scanf("%f",&hd);
+    printf("Qual altura é desejada alcançar depois de subir os degraus? ");
+    scanf("%f",&ht);
+    nd = ht/hd;
+    printf("O numero de degraus a ser subido eh de: %f",nd);
+    
+    return 0;
+    
+}

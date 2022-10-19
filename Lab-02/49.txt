@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    int h, min, seg, d, st, sr;
+    printf("Digite o inicio da experiencia em hora, minuto e segundo: ");
+    scanf("%d%d%d", &h, &min, &seg);
+    printf("Digite a duracao da experiencia em segundos: ");
+    scanf("%d", &d);
+
+    h = h * 3600;
+    min = min * 60;
+    st = h + min + seg + d;
+
+    h = st / 3600;
+    sr = st - h * 3600;
+    min = sr / 60;
+    sr = sr - min * 60;
+    
+    printf("O novo horario eh %d horas, %d minutos e %d segundos", h, min, sr);
+
+}

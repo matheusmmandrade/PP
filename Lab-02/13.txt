@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float M,K;
+    printf("Digite uma distância em quilômetros: ");
+    scanf("%f",&K);
+    M = K/1.61;
+    printf("O valor de %f quilômetros em milhas e igual a %f",K,M);
+    return 0;
+}

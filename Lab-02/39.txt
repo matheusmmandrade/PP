@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define i 780000
+
+int main()
+{
+    float i1,i2,i3;
+    i1 = i*0.46;
+    i2 = i*0.32;
+    i3 = i*0.22;
+    printf("A importancia de 780mil reais sera dividida em tres quantias. O primeiro ganhador recebera a quantia de %f reais, o segundo a quantia de %f e o terceiro a quantia de %f reais.",i1,i2,i3);
+    return 0;
+}

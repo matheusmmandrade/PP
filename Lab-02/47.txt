@@ -1,0 +1,30 @@
+#include <math.h>
+#include <stdio.h>
+
+int main ()
+{
+  int n,d1,d2,d3,d4;
+  
+ printf("Digite um numero inteiro positivo de 1000 a 9999: ");
+ scanf("%d",&n);
+ 
+    d4 = n % 10;        
+    n = n / 10;        
+    d3 = n % 10;      
+    n = n / 10;      
+    d2 = n % 10;
+    n = n / 10;      
+    d1 = n % 10;
+ 
+
+ printf("%d\n",d1); 
+ printf("%d\n",d2); 
+ printf("%d\n",d3); 
+ printf("%d\n",d4); 
+ 
+ 
+ return 0;
+ 
+}
+ 
+  
