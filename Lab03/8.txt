@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float n1,n2,x;
+    printf("Digite as duas notas do aluno:");
+    scanf("%f %f",&n1,&n2);
+    if ((0<=n1&&n1<=10)&&(0<=n2&&n2<=10)){
+        x = (n1+n2)/2;
+        printf("A média entre as duas notas eh igual a %f",x);}
+    else{
+        if (n1>10||n2>10){
+            printf("O numeros são invalidos");
+        }
+    }
+    
+
+    return 0;
+}

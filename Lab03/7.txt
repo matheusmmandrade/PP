@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n1,n2,x;
+    printf("Digite dois numeros inteiros:");
+    scanf("%d %d",&n1,&n2);
+    if (n1==n2){
+        printf("Os dois numeros sao iguais.",x);
+    }
+    
+    else{
+    if (n1>n2){
+        printf("O numero %d eh o maior entre eles. ",n1);
+    }
+    else{ 
+        printf("O numero %d eh o maior entre eles. ",n2);    
+    } 
+    }
+    
+
+    return 0;
+}
