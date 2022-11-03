@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,q;
+    float p;
+    
+    printf("Digite algum dos codigos abaixo: \n");
+    printf("Cachorro Quente - 100\n");
+    printf("Bauru Simples - 101\n");
+    printf("Bauro com Ovo - 102\n");
+    printf("Hamburguer - 103\n");
+    printf("Cheeseburguer - 104\n");
+    printf("Suco - 105\n");
+    printf("Refrigerante - 106\n");
+    scanf("%d",&i);
+    printf("Digite a quantidade do item escolhido: ");
+    scanf("%d",&q);
+    
+    switch (i){
+    case 100 :
+    p = q * 1.20;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 101 :
+    p = q * 1.30;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 102 :
+    p = q * 1.50;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 103 :
+    p = q * 1.20;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 104 :
+    p = q * 1.70;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 105 :
+    p = q * 2.20;
+    printf("Preço: %2.f",p);
+    break;
+    
+    case 106 :
+    p = q * 1.00;
+    printf("Preço: %2.f",p);
+    break;
+    
+    default: printf("Numeros invalidos");
+    break;
+}
+    return 0;
+}

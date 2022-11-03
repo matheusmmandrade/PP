@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,y,z,i;
+    float m;
+    printf("Digite um valor x inteiro positivo: ");
+    scanf("%d",&x);
+    printf("Digite um valor y inteiro positivo: ");
+    scanf("%d",&y);
+    printf("Digite um valor z inteiro positivo: \n");
+    scanf("%d",&z);
+    
+    do{
+        printf("Escolha uma opção de média:\n");
+        printf("1 - Media Geometrica.\n");
+        printf("2 - Media Ponderada.\n");
+        printf("3 - Media Harmonica.\n");
+        printf("4 - Media Aritmetica. \n");
+        scanf("%d",&i);
+    } while ((i < 1) || (i > 4) );
+    
+    switch (i){
+        case 1 :
+        printf("O valor media geometrica entre os numeros escolhidos eh igual a: %f",cbrt(x*y*z));
+        break;
+        
+        case 2 :
+        m = ((1 * x) + (2 * y) + (3 * z)) / 3.0;
+        printf("O valor media ponderada entre os numeros escolhidos eh igual a: %f",m);
+        break;
+        
+        case 3 :
+        m = 1 / ((1.0/x) + (1.0/y) + (1.0/z));
+        printf("O valor media harmonica entre os numeros escolhidos eh igual a: %f",m);
+        break;
+        
+        case 4 :
+        m = (x + y + z) / 3.0;
+        printf("O valor media aritmetica entre os numeros escolhidos eh igual a: %f",m);
+        break;
+        
+        default: printf("Numeros invalidos");
+        break;
+        
+    }
+    
+    
+
+    return 0;
+    
+    
+}

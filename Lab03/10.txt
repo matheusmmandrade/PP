@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    float a,p;
+    char sexo;
+    
+    printf("Qual o seu sexo? F ou M? ");
+    scanf("%c",&sexo);
+    printf("Qual a sua altura em metros? ");
+    scanf("%f",&a);
+    
+    if (sexo == 'M')
+    {
+        p = (72.7*a)-58.0;
+        printf("O seu peso ideal eh igual a %2.f kg",p);
+    }
+    
+    else 
+    {
+        p = (62.1*a)-44.7;
+        printf("O seu peso ideal eh igual a %2.f kg",p);
+    }
+    
+
+    return 0;
+}

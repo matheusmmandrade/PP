@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float d,l,x;
+    
+    printf("Digite a distancia percorrida em km: ");
+    scanf("%f",&d);
+    printf("Digite a quantidade de litros consumidos: ");
+    scanf("%f",&l);
+    
+    x = d/l;
+    
+    if(x < 8){
+        printf("Venda o carro!");
+    }
+    else if(x > 14){
+        printf("Super Econômico!");
+    }
+    else{
+        printf("Economico!");
+    }
+
+    return 0;
+}

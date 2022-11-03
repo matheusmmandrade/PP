@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(){
+    
+    char op;
+    float n1,n2,ad,sub,mul,divi;
+    
+    printf("Escolha qual operacao voce deseja realizar:\n ");
+    printf("Adicao (digite a)\n ");
+    printf("Subtracao (digite s)\n ");
+    printf("Divisao (digite d)\n ");
+    printf("Multiplicacao (digite m)\n ");
+    scanf("%c",&op);
+    printf("Ok, agora digite o primeiro numero: ");
+    scanf("%f",&n1);
+    printf("Ok, agora digite o segundo numero: ");
+    scanf("%f",&n2);
+    
+    switch (op) {
+        case 'a': 
+        ad = n1+n2;
+        printf("A adicao entre os dois numeros eh igual a %2.f",ad);
+        break;
+        case 's': 
+        ad = n1-n2;
+        printf("A adicao entre os dois numeros eh igual a %2.f",sub);
+        break;
+        case 'd': 
+        ad = n1+n2;
+        printf("A adicao entre os dois numeros eh igual a %2.f",divi);
+        break;
+        case 'm': 
+        ad = n1+n2;
+        printf("A adicao entre os dois numeros eh igual a %2.f",mul);
+        break;
+        default: printf("Numeros invalidos");
+        break;
+        }
+        
+    
+    
+
+    return 0;
+}

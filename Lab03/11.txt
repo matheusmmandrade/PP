@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (){
+    
+    int n,soma,alg;
+    soma = 0;
+    
+    printf("Digite um numero inteiro positivo");
+    scanf("%d",&n);
+    
+    if (n>0){
+        while (n>0){
+            alg = n%10;
+            soma = soma + alg;
+            n = n / 10;
+        }
+    printf("A soma dos algarismos do numero eh %d",soma);
+    }
+    else {
+        printf("Numero Invalido");
+    }
+    
+}

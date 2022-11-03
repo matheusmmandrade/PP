@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    float c,p;
+    printf("Digite o custo de fabrica: ");
+    scanf("%f",&c);
+    
+    if (c > 0 && c <= 12000){
+    p = c + (c * 0.05);
+    printf("O custo final eh igual a %f reais",p);
+    }
+    else if (c > 12000 && c <= 25000){
+    p = c + (c * 0.10) + (c * 0.15);
+    printf("O custo final eh igual a %f reais",p);
+    }
+    else if(c > 25000){
+    p = c + (c * 0.15) + (c * 0.20);
+    printf("O custo final eh igual a %f reais",p); 
+    }
+    else{
+        printf("Valor invalido");
+    }
+
+
+
+
+
+return 0;
+
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+    
+    float B,b,h,A;
+    
+    printf("Digite o valor da base maior do trapezio: ");
+    scanf("%f",&B);
+    printf("Digite o valor da base menor do trapezio: ");
+    scanf("%f",&b);
+    printf("Digite o valor a altura do trapezio: ");
+    scanf("%f",&h);
+    
+    A = (B+b)*h/2;
+    
+    if (A>0){
+    printf("A área do trapezio é igual a: %2.f",A);
+    }
+    else{
+        printf("Numeros invalidos");
+    }
+    
+
+    return 0;
+}

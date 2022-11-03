@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    
+    int a,b,s,r1,r2,r3,r4,r5;
+    printf("Digite o primeiro numero (de 1 a 100): ");
+    scanf("%d",&a);
+    printf("Digite o segundo numero (de 1 a 100): ");
+    scanf("%d",&b);
+    printf("Qual a soma entre a e b? ");
+    scanf("%d",&s);
+    
+    printf("Ok, agora vamos para outras 5 perguntas: \n");
+    
+    printf("Pergunta 1: Quanto é 67+33? ");
+    scanf("%d",&r1);
+    
+    printf("Pergunta 2: Quanto é 36+36? ");
+    scanf("%d",&r2);
+    
+    printf("Pergunta 3: Quanto é 99+99? ");
+    scanf("%d",&r3);
+    
+    printf("Pergunta 4: Quanto é 99+101? ");
+    scanf("%d",&r4);
+    
+    printf("Pergunta 5: Quanto é 137+163? ");
+    scanf("%d",&r5);
+    
+    
+    printf("Agora vamos as respostas corretas !\n");
+    
+    printf("Qual a soma entre a e b?\n%d\n",a+b);
+    printf("Pergunta 1: Quanto é 67+33?\n100\n");
+    printf("Pergunta 2: Quanto é 36+36?\n72\n");
+    printf("Pergunta 3: Quanto é 99+99?\n198\n");
+    printf("Pergunta 4: Quanto é 99+101?\n200\n");
+    printf("Pergunta 5: Quanto é 137+163?\n300\n");
+    
+    return 0;
+    
+    
+}

@@ -1,0 +1,56 @@
+
+
+int main()
+{
+    int i;
+    float vi,vf;
+    
+    printf("Digite o valor do produto:\n");
+    scanf("%f",&vi);
+    printf("Escolha o Estado de Compra do produto :\n");
+    printf("1 - Minas Gerais.\n");
+    printf("2 - São Paulo.\n");
+    printf("3 - Rio de Janeiro.\n");
+    printf("4 - Matro Grosso do Sul. \n");
+    scanf("%d",&i);
+    
+    if (i < 0 || i > 4){
+        printf("Estado Invalido");
+    }
+    
+    else{
+        switch (i){
+            
+        case 1 :
+        vf = vi * 1.07;
+        printf("O valor do produto com as devidas taxas eh de: %2.f",vf);
+        break;
+        
+        case 2 :
+        vf = vi * 1.12;
+        printf("O valor do produto com as devidas taxas eh de: %2.f",vf);
+        break;
+        
+        case 3 :
+        vf = vi * 1.15;
+        printf("O valor do produto com as devidas taxas eh de: %2.f",vf);
+        break;
+        
+        case 4 :
+        vf = vi * 1.08;
+        printf("O valor do produto com as devidas taxas eh de: %2.f",vf);
+        break;
+        
+        default:
+        printf("Estado invalido");
+        break;
+        }
+    }    
+        
+    
+    
+    
+    
+    
+    return 0;
+}

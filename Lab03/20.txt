@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    float A,B,C;
+    printf("Digite o valor do lado A: ");
+    scanf("%f",&A);
+    printf("Digite o valor do lado B: ");
+    scanf("%f",&B);
+    printf("Digite o valor do lado C: ");
+    scanf("%f",&C);
+    
+    if (A + B > C && A + C > B && B + C > A){
+        if (A == B == C){
+        printf("Os valores digitados podem formar um triangulo e esse triangulo sera equilatero.");
+        }
+        else if (A == B || A == C || B == C){
+            printf("Os valores digitados podem formar um triangulo e esse triangulo sera isosceles.");
+        }
+        else{
+            printf("Os valores digitados podem formar um triangulo e esse triangulo sera escaleno.");
+        }
+    }
+    
+    else{
+        printf("Os valores digitados nao podem formar um triangulo");
+    }
+    
+    
+    
+
+    return 0;
+}

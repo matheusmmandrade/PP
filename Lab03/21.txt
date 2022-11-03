@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    float n1,n2,x;
+    
+    do{
+        printf("Escolha uma opção:\n");
+        printf("1 - Soma de 2 numeros.\n");
+        printf("2 - Diferenca entre 2 numeros (maior pelo menor).\n");
+        printf("3 - Produto entre 2 numeros.\n");
+        printf("4 - Divisao entre 2 numeros. \n");
+        scanf("%d",&i);
+    } while ((i < 1) || (i > 4) );
+    
+    printf("Agora digite o primeiro numero: ");
+    scanf("%f",&n1);
+    printf("Agora digite o segundo numero: ");
+    scanf("%f",&n2);
+    
+    switch (i){
+        case 1 :
+        x = n1 + n2;
+        printf("O valor da soma dos dois numeros eh igual a: %2.f",x);
+        break;
+        
+        case 2 :
+        if (n1 > n2){
+        x = n1 - n2;
+        printf("O valor da subtracao entre os numeros eh igual a: %2.f",x);
+        }
+        else{
+            x = n2 - n1;
+            printf("O valor da subtracao entre os numeros eh igual a: %2.f",x);
+        }
+        break;
+        
+        case 3 :
+        x = n1 * n2;
+        printf("O valor da multiplicação entre os dois numeros eh igual a: %2.f",x);
+        break;
+        
+        case 4 :
+        x = n1 / n2;
+        printf("O valor da divisao entre os dois numeros eh igual a: %2.f",x);
+        break;
+        
+    }
+    
+    
+    return 0;
+}
