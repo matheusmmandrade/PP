@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+
+    int soma, i, EhPrimo, j, raiz;
+    soma = 0;
+
+    for (i = 3; i < 2000000; i += 2){   
+        EhPrimo = 1;                   
+                                      
+        for(j = 3; j <= raiz; j+= 2){    
+            if (i % j == 0){            
+                EhPrimo = 0;           
+                break;                
+            }
+        }
+
+        if (EhPrimo){            
+            soma = soma + i;
+        }
+
+    }
+
+    printf("Soma: %d", soma + 2);   
+    return 0;
+}

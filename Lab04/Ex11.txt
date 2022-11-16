@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+    int n, i;
+
+    printf("Digite um valor inteiro positivo: ");
+    scanf("%d", &n);
+    printf("\nNumeros naturais de 0 ate %d em ordem crescente: \n\n", n);
+
+    for (i = 0; i < (n + 1); i++){
+        printf("%d ", i);
+    }
+
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+
+    int n, i;
+    float m;
+
+    i = 0;
+
+    while (i < 10){
+        printf("Digite um numero inteiro: ");
+        scanf("%d", &n);
+        m = m + n;
+        i += 1;
+    }
+
+    m = (m / i);
+    printf("A media eh: %.2f", m);
+
+    return 0;
+}
