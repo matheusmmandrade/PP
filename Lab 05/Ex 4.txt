@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int verificar (int x){
+    int y = sqrt(x);
+    if (y*y == x) return 1;
+    else return 0;
+
+}
+
+int main(){
+    int x,y;
+    printf("Digite um numero: ");
+    scanf("%d",&x);
+
+    y = verificar(x);
+
+    if (y == 1){
+        printf("O numero eh um quadrado perfeito");
+    }
+    else{
+        printf("O numero nao eh um quadrado perfeito");
+    } 
+
+    return 0;
+}

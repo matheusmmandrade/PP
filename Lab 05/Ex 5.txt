@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+#define pi 3.14
+
+float volume (float r){
+    float v = (4*pi*r*r*r)/3;
+    return v;
+
+}
+
+int main(){
+    float v,r;
+    printf("Digite o valor do raio: ");
+    scanf("%f",&r);
+
+    v = volume(r);
+
+    printf("O volume eh igual a %f",v);
+
+    return 0;
+}

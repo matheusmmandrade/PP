@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+float C (float km, float l){
+    float consumo = km / l;
+    return consumo;
+}
+
+int main(){
+    float distancia, litros, consumo;
+    printf("Digite a distancia percorrida em km: ");
+    scanf("%f", &distancia);
+    printf("Digite a quantidade de litros consumidos: ");
+    scanf("%f", &litros);
+
+    consumo = C(distancia, litros);
+
+    if (consumo < 8){ 
+        printf("Venda o carro!\n");
+    }else if (consumo <= 14){
+        printf("Economico!\n");
+    }else{ 
+        printf("Super economico!");
+    }
+    return 0;
+}

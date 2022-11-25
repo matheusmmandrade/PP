@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+float maior(float n1, float n2){
+    if(n1 > n2){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+int main(){
+    float n1,n2,x;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f",&n1);
+    printf("Digite o segundo numero: ");
+    scanf("%f",&n2);
+
+    x = maior(n1,n2);
+
+    if (x == 1){
+        printf("O primeiro numero eh maior");
+    }
+    else{
+        printf("O segundo numero eh maior");
+    }
+
+}

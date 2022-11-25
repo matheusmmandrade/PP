@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int tempototal(int horas, int minutos, int segundos){
+    int total;
+    total = (horas * 3600) + (minutos * 60) + segundos;
+    return total;
+
+}
+
+int main(){
+    int horas,minutos,segundos,total;
+    
+    printf("Digite o valor das horas: ");
+    scanf("%d", &horas);
+    printf("Digite o valor dos minutos: ");
+    scanf("%d", &minutos);
+    printf("Digite o valor dos segundos: ");
+    scanf("%d", &segundos);
+
+    total = tempototal(horas, minutos, segundos);
+    printf("O tempo total em segundos eh igual a %d",total);
+
+    return 0;
+}

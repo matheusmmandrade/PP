@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#define pi 3.141592
+
+float volume(float altura, float raio){
+float v = pi * altura * raio * raio;
+return v;
+}
+
+int main(){
+    float altura,raio,v;
+    printf("Digite a altura do cilindro: ");
+    scanf("%f",&altura);
+    printf("Digite o raio do cilindro: ");
+    scanf("%f",&raio);
+
+    v = volume(altura,raio);
+    printf("O volume do cilindro eh igual a %f", v);
+
+    return 0;
+
+}

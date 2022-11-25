@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void des_linha(int x);
+
+int main(){
+
+    int x;
+
+    printf("Digite o numero de linhas: ");
+    scanf("%d", &x);
+
+    des_linha(x);
+    return 0;
+}
+
+void des_linha(int x){
+    int i, j;
+    for (i = 0; i < x; i++){
+        for (j = 0; j <= i; j++){
+            printf("!");
+        }
+        printf("\n");
+    }
+}

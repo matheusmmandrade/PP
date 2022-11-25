@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+float conversaoCelsius(float c){
+    float f;
+    f = (c * 9.0 * 1.0/5) + 32.0;
+    return f;
+}
+
+int main(){
+    float c, f;
+    
+    printf("Digite o valor em celsius: ");
+    scanf("%f", &c);
+
+    f = conversaoCelsius(c);
+    printf("O valor em fahrenheit eh igual a %f", f);
+
+    return 0;
+}

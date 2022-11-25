@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void desetriangulo(int x);
+
+int main(){
+    int x;
+    printf("Digite a altura: ");
+    scanf("%d", &x);
+
+    destriangulo(x);
+    return 0;
+}
+
+void destriangulo(int x){
+    int i, j;
+
+    for (i = 0; i < x; i++){        
+        for (j = 0; j <= i; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for (i = x - 1; i > 0; i--){    
+        for (j = 0; j < i; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+}

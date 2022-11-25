@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+float conta(float nota1, float nota2, float nota3, float letra){
+    float x;
+    if (letra == 'A'){
+        x = (nota1 + nota2+ nota3)/3;
+        return x;
+    }
+    else{
+        x = (((nota1 * 5) + (nota2 * 3) + (nota3 * 2))/3);
+        return x;
+    }
+}
+
+int main(){
+
+    float nota1, nota2, nota3, x;
+    char letra;
+
+    printf("Escolha a letra A para media aritmetica ou P para media ponderada: ");
+    scanf("%c",&letra);
+    printf("Digite a primeira nota: ");
+    scanf("%f",&nota1);
+    printf("Digite a segunda nota: ");
+    scanf("%f",&nota2);
+    printf("Digite a terceira nota: ");
+    scanf("%f",&nota3);
+    
+
+    if (letra == 'A'){
+        x = conta(nota1, nota2, nota3, letra);
+        printf("A media aritmetica das notas eh igual a %f", x);
+    }
+    else {
+        x = conta(nota1, nota2, nota3, letra);
+        printf("A media ponderada das notas eh igual a %f", x);
+    }
+
+    return 0;
+
+
+}
