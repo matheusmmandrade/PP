@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+
+    int matriz[4][4], i, j, maior = 0, ii, jj;
+
+    for (i = 0; i < 4; i++){
+        for (j = 0; j < 4; j++){
+            printf("Digite o valor de matriz[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+
+            if (matriz[i][j] > maior){
+                maior = matriz[i][j];
+                ii = i;
+                jj = j;
+            }
+        }
+    }
+
+    printf("O maior valor da mariz esta na posicao %d x %d", ii, jj);
+
+    return 0;
+}

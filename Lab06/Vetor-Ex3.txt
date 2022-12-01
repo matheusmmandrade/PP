@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+
+    int vetor[6];
+
+    printf("Digite os valores do vetor: ");
+
+    for (int i = 0; i < 6; i++){
+        printf("Digite o valor da posicao %d", i);
+        scanf("%d",&vetor[i]);
+    }
+
+    printf("Valores lidos na ordem inversa: \n");
+    printf("%d %d %d %d %d %d ",vetor[5],vetor[4],vetor[3],vetor[2],vetor[1],vetor[0]);
+
+    return 0;
+    
+}

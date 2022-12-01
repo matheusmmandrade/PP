@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+
+    int quantidade = 0,vetor[6], i, s = 0;
+
+    for(i = 0; i < 6; i++){
+        printf("%do numero: ", i+1);
+        scanf("%d", &vetor[i]);
+    }
+
+    printf("Nums pares: ");
+    for (i = 0; i < 6; i++){
+        if (vetor[i] % 2 == 0){
+            printf("%d ", vetor[i]);
+            s += vetor[i];
+        }
+    }
+
+    printf("\nNums impares: ");
+    for (i = 0; i < 6; i++){
+        if (vetor[i] % 2 != 0){
+            printf("%d ", vetor[i]);
+            quantidade++;
+        }
+    }
+
+    printf("\nA soma dos num pares eh %d \n", s);
+    printf("A quantidade de num imp eh %d \n", quantidade);
+
+    return 0;
+}

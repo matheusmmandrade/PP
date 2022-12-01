@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+
+    int matriz[10][10], x, y;
+
+    for (x = 0; x < 10; x++){
+        for (y = 0; y < 10; y++){
+            if (y == j){
+                matriz[x][y] = (3*i*i - 1);
+            }
+            else if (x > y){
+                matriz[x][y] = (4 * pow(i, 3) - 5*y*y + 1);
+            }
+            else{
+                matriz[x][y] = (2*x + 7*y - 2);
+            }
+        }
+    }
+
+    for (x = 0; x < 10; x++){
+        for (y = 0; y < 10; y++){
+            printf("%4d  ", matriz[x][y]);
+        }
+    printf("\n");
+    } 
+
+    return 0;
+}

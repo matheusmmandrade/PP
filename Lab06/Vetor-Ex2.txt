@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+
+    int vetor[8],x,y,s;
+
+    printf("Digite os valores do vetor: ");
+
+    for (int i = 0; i < 8; i++){
+        printf("Posicao %d", i);
+        scanf("%d",&vetor[i]);
+    }
+
+    printf("\nDigite a primeira posicao para somar: ");
+    scanf("%d", &x);
+    printf("Digite a segunda posicao para somar: ");
+    scanf("%d", &y);
+    
+    s = vetor[x] + vetor[y];
+
+    printf("A soma eh %d",s);
+
+
+
+ 
+
+
+    return 0;
+    
+}
