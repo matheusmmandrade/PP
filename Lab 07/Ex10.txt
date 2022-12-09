@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char p[64];
+    float valor, vd, vp;
+
+    printf("Digite o nome da mercadoria: ");
+    gets(p);
+    printf("Digite o valor da mercadoria: ");
+    scanf("%f", &valor);
+
+    vd = valor * 0.1;
+    vp = valor - vd;
+
+
+    printf("Nome: %s\n", p);
+    printf("Valor total: %.2f\n", valor);
+    printf("Valor do desconto: %.2f\n", vd);
+    printf("Valor a ser pago aa vista: %.2f\n", vp );
+
+    return 0;
+}

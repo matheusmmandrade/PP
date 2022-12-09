@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char str[128];
+
+    printf("Digite uma sentenca: ");
+    fgets(str, 128, stdin);
+    printf("\nString: %s", str);
+
+    int len = strlen(str);
+
+    for (int i = 0; i < len; i++){
+        if (str[i] != ' ' && str[i] != '\n'){
+            str[i] -= 29;
+        }    
+    }
+
+    printf("String: %s", str);
+
+    return 0;
+}

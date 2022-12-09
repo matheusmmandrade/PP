@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char str[100];
+    int contador = 0;
+
+    printf("String de 0 ou 1: ");
+    fgets(str, 100, stdin);
+
+    for (int i = 0; i < str[i]; i++){
+        if (str[i] == '1') contador++; 
+    }
+
+    int slen = strlen(str);
+    if (slen > 0 && str[slen-1] == '\n') str[slen-1] = '\0';
+
+    printf("%s -> %d", str, contador);
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char l1, l2, str[128];
+
+    printf("Digite a primeira letra: ");
+    scanf("%c", &l1);
+    printf("Digite a segunda letra: ");
+    scanf(" %c", &l2);
+    setbuf(stdin, NULL);
+    printf("Frase: ");
+    fgets(str, 128, stdin);
+
+    int len = strlen(str);
+
+    for (int i = 0; i < len; i++){
+        if (str[i] == l1){
+            str[i] = l2;
+        }
+    }
+
+    printf("Frase nova: %s", str);
+
+    return 0;
+}
