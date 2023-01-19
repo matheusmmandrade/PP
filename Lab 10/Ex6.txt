@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *mem, tm;
+
+    printf("Quantos bytes deseja alocar do tipo inteiro (inteiro = 4 bytes) ? ");
+    scanf("%d", &tm);
+    fflush(stdin);
+    mem = calloc(tm, sizeof(int));
+
+    if (mem == NULL) {
+        printf("Alocacao mal sucedida :(\n");
+        exit(1);
+    } else 
+        printf("%d bytes alocados\n", tm * sizeof(mem));
+
+    char op;
+    do {
+        printf("\nPara inserir um valor em uma determinada posicao, digite [A]: \n");
+        printf("Para consultar um valor em uma determinada posicao, digite [B]: \n");
+        printf("Para encerrar, digite [E]\n");
+        scanf("%c", &op);
+
+        int v, pv, pc;
+
+        switch (op) 
+        {
+            case 'A':
+                printf("Digite o valor que deseja inserir: ");
+                scanf("%d", &v);
+                printf("Digite para qual posicao deseja inserir o [%d]: ", v);
+                scanf("%d", &pv);
+                fflush(stdin);
+
+                mem[pv] = v;
+                break;
+
+            case 'B':
+                printf("Posicao da memoria que deseja consultar: ");
+                scanf("%d", &pc);
+                fflush(stdin);
+                
+                printf("Valor na posicao [%d] : [%d]\n", pc, mem[pc]);
+                break;
+            
+            default:
+                break;
+        }
+
+    } while (op != 'E');
+        
+    return 0;
+}

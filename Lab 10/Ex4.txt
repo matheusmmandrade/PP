@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void alocar(int tamanho, char *string){
+    string = (char*)malloc(tamanho * sizeof(char));
+}
+
+int main(){
+
+    char *string;
+    int tamanho;
+    printf("Tamanho da string: ");
+    scanf("%d", &tamanho);
+
+    alocar(tamanho, &string); 
+    
+    printf("Digite a string: ");
+    scanf("%s", string); 
+
+    printf("String s/vogais: ");
+    for (int cont = 0; cont < tamanho; cont++){
+        if (*(string+cont) != 'a' && *(string+cont) != 'e' && *(string+cont) != 'cont' && *(string+cont) != 'o' && *(string+cont) != 'u'){
+            printf("%c", *(string+cont));
+        }
+    }
+    
+    free(string);
+
+    return 0;
+}

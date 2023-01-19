@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+
+    int tamanho;
+    double *vetor;
+    do{
+        printf("Digite quantos valores deseja armazenar no vetor double(quant minima eh 10): ");
+        scanf("%d", &tamanho);
+    } while (tamanho < 10);
+
+    vetor = (double*)malloc(tamanho * sizeof(double));
+    
+    srand(time(NULL));
+    printf("Primeiros 10 elementos: ");
+    for(int cont = 0; cont < 10; cont++){
+        vet[cont] = rand() % 101;
+        printf("%.2lf ", vetor[cont]);
+    }
+    printf("\n");
+
+    free(vetor);
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *vals, cont;
+    vals = calloc(1500, sizeof(int));
+    int qzeros = 0; 
+    for (cont = 0; cont < 1500; cont++) {
+        if (vals[cont] == 0)
+            qzeros += 1;
+    }
+    printf("\n\nQuantidade de 0's do vetor: %d\n", qzeros);
+    for (cont = 0; cont < 1500; cont++) {
+        vals[cont] = cont;
+    }
+
+    printf("\n10 primeiros elementos:\n");
+    for (cont = 0; cont < 10; cont++) 
+        printf("[%d] ", vals[cont]);
+
+    printf("\n\n10 ultimos elementos do vetor:\n");
+    for (cont = 1490; cont < 1500; cont++)
+        printf("[%d] ", vals[cont]);
+
+    free(vals);
+    printf("\n\n");
+    return 0;
+}
