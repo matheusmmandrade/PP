@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int l, c;
+
+    printf("Numero de linhas da matriz: ");
+    scanf("%d", &l);
+
+    printf("Numero de colunas da matriz: ");
+    scanf("%d", &c);
+
+    float *mat = calloc(l * c, sizeof(float));
+
+    printf("\n");
+    for (int cont = 0; cont < l; cont++) {
+        for (int j = 0; j < c; j++) {
+            printf("Digite a matriz de posicao [%d][%d]: ", cont, j);
+            scanf("%f", &mat[cont * c + j]);
+        }
+    }
+
+    printf("\nMatriz que foi inserida: \n");
+    for (int cont = 0; cont < l; cont++) {
+        for (int j = 0; j < c; j++) {
+            printf("[%.3f]", mat[cont * c + j]);
+        }
+        printf("\n");
+    }
+    free(mat);
+    printf("\n");
+
+    return 0;
+}

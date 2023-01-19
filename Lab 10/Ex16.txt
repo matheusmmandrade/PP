@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    int N, M;
+    int **mat;
+    int cont, j;
+
+    printf("Numero de linhas: ");
+    scanf("%d", &N);
+    printf("Numero de colunas: ");
+    scanf("%d", &M);
+
+    mat = (int**)malloc(N * sizeof(int*));
+    for(cont = 0; cont < N; cont++){
+        mat[cont] = (int*)malloc(M * sizeof(int));
+    }
+
+    for(cont = 0; cont < N; cont++){
+        for(j = 0; j < M; j++){
+            printf("Digite o elemento [%d][%d]: ", cont, j);
+            scanf("%d", &mat[cont][j]);
+        }
+    }
+
+    printf("Matriz original: \n");
+    for(cont = 0; cont < N; cont++){
+        for(j = 0; j < M; j++){
+            printf("%-4d ", mat[cont][j]);
+        }
+        printf("\n");
+    }
+
+    /* printf("Matriz transposta: \n");
+    for(cont = 0; cont < M; cont++){
+        for(j = 0; j < N; j++){
+            printf("%-4d ", mat[j][cont]);
+        }
+        printf("\n");
+    } */
+
+    int **matTransposta = (int**)malloc(M * sizeof(int*));
+    for(cont = 0; cont < M; cont++){
+        matTransposta[cont] = (int*)malloc(N * sizeof(int));
+    }
+    
+    for(cont = 0; cont < M; cont++){
+        for(j = 0; j < N; j++){
+            matTransposta[cont][j] = mat[j][cont];
+        }
+    }
+
+    printf("Matriz transposta: \n");
+    for(cont = 0; cont < M; cont++){
+        for(j = 0; j < N; j++){
+            printf("%-4d ", matTransposta[cont][j]);
+        }
+        printf("\n");
+    }
+
+    for(cont = 0; cont < N; cont++){
+        free(mat[cont]);
+    }
+    free(mat);
+
+    for(cont = 0; cont < M; cont++){
+        free(matTransposta[cont]);
+    }
+    free(matTransposta);
+
+    return 0;
+}
