@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    int codigo;
+    char nome[50];
+    int estoque;
+    float preco;
+} produto;
+
+int main(){
+
+    int N, maiorP, maiorQ;
+    printf("Digite o nume de produtos: ");
+    scanf("%d", &N);
+    produto *produtos = (produto*)malloc(N * sizeof(produto));
+    for(int cont = 0; cont < N; cont++){
+
+        printf("\n%do produto\n", cont+1);
+        printf("Codigo: ");
+        scanf("%d", &produtos[cont].codigo);
+        printf("Nome: ");
+        scanf("%s", produtos[cont].nome);
+        printf("Estoque: ");
+        scanf("%d", &produtos[cont].estoque);
+        printf("Preco: ");
+        scanf("%f", &produtos[cont].preco);
+    }
+
+    maiorP = 0;
+    maiorQ = 0;
+    for(int cont = 0; cont < N; cont++){
+        if(produtos[cont].preco > produtos[maiorP].preco){
+            maiorP = cont;
+        }
+        if(produtos[cont].estoque > produtos[maiorQ].estoque){
+            maiorQ = cont;
+        }
+    }
+
+    printf("Maior preco: %s - R$%.2f\n", produtos[maiorP].nome, produtos[maiorP].preco);
+    printf("Maior quant: %s - Estoque: %d\n", produtos[maiorQ].nome, produtos[maiorQ].estoque);
+
+    free(produtos);
+    return 0;
+}
