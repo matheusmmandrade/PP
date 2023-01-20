@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+struct city 
+{
+    char nome[100];
+    double x, y;
+
+};
+
+int main() 
+{
+    int n;
+
+    printf("Quantidade de cidades: ");
+    scanf("%d", &n);
+
+    struct city *cidades = (struct city *) malloc(n * sizeof(struct city));
+
+    for (int cont = 0; cont < n; cont++) {
+        printf("Nome da [%da] cidade : ", cont + 1);
+        fgets(cidades[cont].nome, 100, stdin);
+
+        printf("Coordenadas X e Y de %s", cidades[cont].nome);
+        scanf("%lf %lf", &cidades[cont].x, &cidades[cont].y);
+        fflush(stdin);
+    }
+
+    double **dist = (double **) malloc(n * sizeof(double*));
+    for (int cont = 0; cont < n; cont++)
+        dist[cont] = (double *) malloc(n * sizeof(double));
+
+    for (int cont = 0; cont < n; cont++) {
+        for (int j = 0; j < n; j++) {
+            double xDiff = cidades[cont].x - cidades[j].x;
+            double yDiff = cidades[cont].y - cidades[j].y;
+            dists[cont][j] = sqrt(xDiff * xDiff + yDiff * yDiff);
+        }
+    }
+
+    printf("\nMatriz de dist:\n");
+    for (int cont = 0; cont < n; cont++) {
+        for (int j = 0; j < n; j++) {
+            printf("[%.2lf] ", dist[cont][j]);
+        }
+        printf("\n");
+    }
+
+    int c1, c2;
+
+    printf("\nNumero de duas cidades: ");
+    scanf("%d %d", &c1, &c2);
+
+    printf("A distancia entre %s e %s e %.2lf", cidades[c1 - 1].nome, cidades[c2 - 1].nome, dist[c1 - 1][c2 - 1]);
+
+
+    // liberando memória
+    for (int cont = 0; cont < n; cont++)
+        free(dist[cont]);
+    free(dist);
+    free(cidades);
+
+    return 0;
+}
