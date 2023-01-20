@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    int **mat = (int**)malloc(10 * sizeof(int*));
+    char *vA = (char*)malloc(1024 * sizeof(char));
+    for(int cont = 0; cont < 10; cont++){
+        mat[cont] = (int*)malloc(10 * sizeof(int));
+    }
+
+    typedef struct{
+        char nome[30];
+        int codigo;
+        float preco;
+    } produto;
+    produto *vC = (produto*)malloc(50 * sizeof(produto));
+    char **txt = (char**)malloc(100 * sizeof(char*));
+    for(int cont = 0; cont < 100; cont++){
+        txt[cont] = (char*)malloc(80 * sizeof(char));
+    }
+
+    free(vA);
+
+    for(int cont = 0; cont < 10; cont++){
+        free(mat[cont]);
+    }
+    free(mat);
+    free(vC);
+    for(int cont = 0; cont < 100; cont++){
+        free(txt[cont]);
+    }
+    free(txt);
+    return 0;
+}
