@@ -1,0 +1,14 @@
+void main(){
+
+    int x, y;
+
+    printf("Dois numeros inteiros: ");
+    scanf("%d %d", &x, &y);
+
+    printf("Conteudo do maior: ");
+    if (&x > &y)
+        printf("%d\n", x);
+    else
+        printf("%d\n", y);
+
+}

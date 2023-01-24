@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main(){
+
+    int vet[5], cont;
+    int *p = vet;
+   
+    for(cont = 0; cont < 5; cont++){
+        printf("%do valor: ", cont+1);
+        scanf("%d", p);
+
+        p++;
+    }
+
+    p = vet;
+    printf("Dobro:\n");
+    for (cont = 0; cont < 5; cont++){
+        printf("%d\n", (*p) * 2);
+
+        p++;
+    }
+
+}

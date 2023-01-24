@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void min_max(int *V, int size, int *min, int *max) {
+    *min = *V;
+    *max = *V;
+    int i;
+    for (i = 1; i < size; i++) {
+        if (*(V+i) < *min) {
+            *min = *(V+i);
+        }
+        if (*(V+i) > *max) {
+            *max = *(V+i);
+        }
+    }
+}
+
+int main() {
+    int V[] = {1, 2, 3, 4, 5, 6};
+    int size = sizeof(V) / sizeof(V[0]);
+    int min, max;
+    min_max(V, size, &min, &max);
+    printf("Valor mínimo: %d\n", min);
+    printf("Valor máximo: %d\n", max);
+    return 0;
+}

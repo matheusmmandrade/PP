@@ -1,0 +1,18 @@
+void s(int *x, int *y){
+
+    int soma = *x + *y;
+    *x = soma;
+}
+
+void main(){
+
+    int x, y;
+
+    printf("Dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+
+    s(&x, &y);
+
+    printf("Valores:\nx = %d\ny = %d", x, y);
+
+}

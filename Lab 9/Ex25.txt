@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void ler_notas(float *nota1, float *nota2) {
+    do {
+        printf("Informe a primeira nota: ");
+        scanf("%f", nota1);
+    } while (*nota1 < 0 || *nota1 > 10);
+
+    do {
+        printf("Informe a segunda nota: ");
+        scanf("%f", nota2);
+    } while (*nota2 < 0 || *nota2 > 10);
+}
+
+void calcula_medias(float nota1, float nota2, float *media_simples, float *media_ponderada) {
+    *media_simples = (nota1 + nota2) / 2;
+    *media_ponderada = (nota1 + (nota2 * 2)) / 3;
+}
+
+int main() {
+    float nota1, nota2, media_simples, media_ponderada;
+    ler_notas(&nota1, &nota2);
+    calcula_medias(nota1, nota2, &media_simples, &media_ponderada);
+    printf("Média simples: %.2f\n", media_simples);
+    printf("Média ponderada: %.2f\n", media_ponderada);
+    return 0;
+}

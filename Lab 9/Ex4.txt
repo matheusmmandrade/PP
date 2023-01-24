@@ -1,0 +1,20 @@
+void change(int *x, int *y){
+    int aux;
+
+    aux = *x;
+    *x = *y;
+    *y = aux;
+}
+
+void main(){
+
+    int x, y;
+
+    printf("Digite dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+
+    change(&x, &y);
+
+    printf("Valores trocados:\nx = %d\ny = %d", x, y);
+
+}

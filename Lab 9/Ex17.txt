@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void frac(float num, int *inteiro, float *frac) {
+    *inteiro = (int)num;
+    *frac = num - *inteiro;
+}
+
+int main() {
+    float num, fracao;
+    int inteiro;
+    printf("Digite um número real: ");
+    scanf("%f", &num);
+    frac(num, &inteiro, &fracao);
+    printf("Parte inteira: %d\n", inteiro);
+    printf("Parte fracionária: %f\n", fracao);
+    return 0;
+}

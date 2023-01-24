@@ -1,0 +1,23 @@
+void change(int *x, int *y){
+    int aux;
+
+    if (*y > *x){
+        aux = *y;
+        *y = *x;
+        *x = aux;
+    }
+
+}
+
+void main(){
+
+    int x, y;
+
+    printf("Dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+
+    change(&x, &y);
+
+    printf("Valores:\nx = %d\ny = %d", x, y);
+
+}

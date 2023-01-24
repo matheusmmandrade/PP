@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    int elem[5];
+
+    printf("\n");
+    for (int cont = 0; cont < 5; cont++) {
+        printf("Digite o %do valor: ", cont + 1);
+        scanf("%d", &elem[cont]);
+
+        if (elem[cont] % 2 == 0) 
+            printf("Valor par = %d \tPos = %d\t Endereco de mem em hd = %p\n", elem[i], i, &elem[i]);
+    }
+    printf("\n");
+}

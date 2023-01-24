@@ -1,0 +1,18 @@
+int somax2(int *x, int *y){
+
+    *x = 2 * (*x);
+    *b = 2 * (*y);
+
+    return (*x + *y);
+}
+
+void main(){
+
+    int x, b;
+
+    printf("Dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+
+    printf("Valor da soma do dobro: %d", somax2(&x, &y));
+
+}

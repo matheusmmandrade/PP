@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void main(){
+
+    int x = 0;
+    float y = 0; 
+    char c = 'a';
+
+    int *px = &x;
+    float *py = &y;
+    char *pc = &c;
+
+    printf("Valor antes da modificacao:\nx = %d\ny = %f\nc = %c \n", x, y, c);
+
+    *px += 1;
+    *py += .1;
+    *pc++;
+
+    printf("\nValor depois da modificacao:\ni = %d\ny = %f\nc = %c \n", x, y, c);
+
+}
