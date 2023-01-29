@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int anoCorrente;
+    char arquivoEntrada[100], arquivoSaida[100], nome[40];
+    int anoNascimento, idade;
+    FILE* fEntrada, fSaida;
+
+    printf("Informe o ano corrente: ");
+    scanf("%d", &anoCorrente);
+    printf("Informe o nome do arquivo de entrada: ");
+    scanf("%s", arquivoEntrada);
+    printf("Informe o nome do arquivo de saida: ");
+    scanf("%s", arquivoSaida);
+
+    fEntrada = fopen(arquivoEntrada, "r");
+    fSaida = fopen(arquivoSaida, "w");
+
+    while (fscanf(fEntrada, "%s %d", nome, &anoNascimento) != EOF) {
+        idade = anoCorrente - anoNascimento;
+        fprintf(fSaida, "%s ", nome);
+
+        if (idade < 18) {
+            fprintf(fSaida, "menor de idade\n");
+        } else if (idade == 18) {
+            fprintf(fSaida, "entrando na maior idade\n");
+        } else {
+            fprintf(fSaida, "maior de idade\n");
+        }
+    }
+
+    fclose(fEntrada);
+    fclose(fSaida);
+
+    return 0;
+}

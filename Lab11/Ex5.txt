@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    char nomeArquivo[100];
+    char caractere;
+    int contador = 0;
+    FILE *arquivo;
+
+    printf("Insira o nome do arquivo: ");
+    scanf("%s", nomeArquivo);
+
+    printf("Insira o caractere a ser buscado: ");
+    scanf(" %c", &caractere);
+
+    arquivo = fopen(nomeArquivo, "r");
+
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 0;
+    }
+
+    while (!feof(arquivo)) {
+        char c = fgetc(arquivo);
+
+        if (c == caractere) {
+            contador++;
+        }
+    }
+
+    fclose(arquivo);
+
+    printf("O caractere '%c' aparece %d vezes no arquivo.\n", caractere, contador);
+
+    return 0;
+}
